@@ -17,6 +17,7 @@ RUN apk add --update \
         git \
         ca-certificates \
         nodejs \
+        npm \
         autoconf \
         nano && \
         apk add --virtual build-dependencies build-base gcc wget
