@@ -1,4 +1,4 @@
-FROM php:7.1-fpm-alpine
+FROM php:7.4-alpine3.11
 MAINTAINER Andre Metzen <metzen@conceptho.com>
 
 ENV TERM=xterm
