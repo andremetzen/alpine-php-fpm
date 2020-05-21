@@ -23,10 +23,8 @@ RUN apk add --update \
         apk add --virtual build-dependencies build-base gcc wget
 
 RUN docker-php-ext-configure gd \
-        --with-gd \
-        --with-freetype-dir=/usr/include/ \
-        --with-png-dir=/usr/include/ \
-        --with-jpeg-dir=/usr/include/ && \
+        --with-freetype=/usr/include/ \
+        --with-jpeg=/usr/include/ && \
     NPROC=$(getconf _NPROCESSORS_ONLN) && \
     docker-php-ext-install -j${NPROC} gd && \
     apk del --no-cache freetype-dev libpng-dev libjpeg-turbo-dev
